@@ -1,8 +1,6 @@
 var places = require('../models/models.js')
 
 var indexController = {
-
-
 	seville: function(req, res) {
 		res.render('seville', {
 			places: places
@@ -37,7 +35,14 @@ var indexController = {
 		res.render('philippines', {
 			places: places
 		});
-	},
+	},	
+
+	next: function(req, res) {
+		res.send(JSON.stringify({
+			location: places[req.query.location].location,
+			nextLocation: places[req.query.location].next
+		})
+	)},
 
 	lost: function(req, res) {
 		res.render('lost')

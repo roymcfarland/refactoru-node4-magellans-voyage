@@ -14,6 +14,8 @@ app.get('/', indexController.seville);
 // app.get('/straight', indexController.straight);
 // app.get('/guam', indexController.guam);
 // app.get('/philippines', indexController.philippines);
+app.get('/next', indexController.next);
+
 app.get('/:stop', function(req, res) {
 	if (indexController[req.params.stop])
 		indexController[req.params.stop](req, res);
@@ -21,8 +23,6 @@ app.get('/:stop', function(req, res) {
 		res.render('lost')
 });
 	
-
-
 var server = app.listen(5669, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
