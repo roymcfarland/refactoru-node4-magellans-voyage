@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1 You are located at #{places[4].location}
+	h3 #{places[4].description}
+
+block footer
+		a(href="/straight"): button Previous Location
+		a(href="/philippines"): button Next Location

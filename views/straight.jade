@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1 You are located at #{places[3].location}
+	h3 #{places[3].description}
+
+block footer
+		a(href="/capeVerde"): button Previous Location
+		a(href="/guam"): button Next Location

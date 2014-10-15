@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1 You are located at #{places[0].location}
+	h3 #{places[0].description}
+
+block footer
+	button Previous Location
+	a(href="/canary"): button Next Location
