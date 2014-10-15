@@ -39,8 +39,8 @@ var indexController = {
 
 	next: function(req, res) {
 		res.send(JSON.stringify({
-			location: places[req.query.location].location,
-			nextLocation: places[req.query.location].next
+			location: places[0].location,
+			nextLocation: places[0].next
 		})
 	)},
 
